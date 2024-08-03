@@ -27,7 +27,10 @@ jobs:
 
     - name: Set up Cloud SDK
       uses: 'google-github-actions/setup-gcloud@v2'
-
+      
+    - name: Create local directory
+      run: mkdir -p ./gcp-bucket-content
+      
     - name: Sync bucket
       run: |
         gsutil -m rsync -r gs://ko-vi-train ./gcp-bucket-content
