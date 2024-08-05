@@ -6,6 +6,10 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 DATASET_NAME = "ko-vi-fpcb-translator"
 REPO_PATH = os.getcwd()
 
+# Kaggle API 인증 정보 설정
+os.environ['KAGGLE_USERNAME'] = "yakdoljo"
+os.environ['KAGGLE_KEY'] = "7959e4a5f973e51fb68a28d3b6375828"
+
 def download_dataset():
     api = KaggleApi()
     api.authenticate()
