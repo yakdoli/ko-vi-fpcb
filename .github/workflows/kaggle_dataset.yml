@@ -26,10 +26,8 @@ jobs:
         KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
         KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
       run: |
-        kaggle datasets download -d ko-vi-fpcb-translator -p ./dataset
-        unzip -o ./dataset/*.zip -d ./dataset
-        rm ./dataset/*.zip
-
+        kaggle datasets download -d ko-vi-fpcb-translator -p ./dataset --unzip
+        
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
