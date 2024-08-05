@@ -31,4 +31,4 @@ jobs:
       env:
         KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
         KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
-      run: python sync_kaggle.py
+      run: python .github/workflows/sync_kaggle.py
